@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+{% for list in person_list %}
+
+
+<button class="btn btn-outline-primary" href="#mymodal{{list.id}}"  data-toggle="modal" data-target="#mymodal{{list.id}}" class="startuplist">
+<div>
+		<h3>{{ list.Name }}</h3>
+
+</div>
+</button>
+
+<!-- The Modal -->
+<div id="mymodal{{list.id}}" class="modal"  role="dialog">
+	<div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <!-- Modal Header -->
+	      <div class="modal-header">
+	        <h4 class="modal-title">{{ list.Name }}</h4>
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       
+	      </div>
+
+	      <!-- Modal body -->
+	      <div class="modal-body">
+	      	<table>
+	      		<td>
+	      			<tr>
+	      				Name <br>
+	      				{{list.Name}}<br>
+	      				<br>
+	      			</tr>
+	      			<tr>
+	      				E-mail<br>
+	      				{{list.Email}}<br>
+	      				<br>
+	      			</tr>
+	      			<tr>
+	      				About<br>
+	      				{{list.About}}<br>
+	      				<br>
+	      			</tr>
+	      			
+	      		</td>
+	      	</table>
+
+	       
+	      </div>
+
+	      <!-- Modal footer -->
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+
+
+{% endfor %}
+
+{% endblock %}
