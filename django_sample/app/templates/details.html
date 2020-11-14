@@ -8,13 +8,12 @@
 
 {% for list in person_list %}
 
+<div class="d-flex flex-column bd-highlight mb-3">
+<button class="btn btn-outline-primary" href="#mymodal{{list.id}}"  data-toggle="modal" data-target="#mymodal{{list.id}}" >
+  {{list.Name}}
 
-<button class="btn btn-outline-primary" href="#mymodal{{list.id}}"  data-toggle="modal" data-target="#mymodal{{list.id}}" class="startuplist">
-<div>
-		<h3>{{ list.Name }}</h3>
-
-</div>
 </button>
+</div>
 
 <!-- The Modal -->
 <div id="mymodal{{list.id}}" class="modal"  role="dialog">

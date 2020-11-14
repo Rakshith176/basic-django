@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<a class="btn btn-outline-info" href="{% url 'details' %}">Click here to check all registered details</a>
     <div class="content-section">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
