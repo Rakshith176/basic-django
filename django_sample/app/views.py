@@ -5,6 +5,7 @@ from .models import *
 
 
 def register(request):
+	form = Register(request.POST)
 	if request.method == 'POST':
 		form=Register(request.POST)
 		if form.is_valid():

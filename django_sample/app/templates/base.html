@@ -11,16 +11,21 @@
 <style type="text/css">
 
 .header{
-	background-color: lightblue;
-	opacity: 0.3;
+	background-color: black;
+	
 	width: 100%;
 	height: 100px;
 
 }
+.header-font{
+	text-align: center;
+	font-size: 40px;
+	color: white;
+}
 
 .footer{
 
-   position: fixed;
+   
    left: 0;
    bottom: 0;
    width: 100%;
@@ -30,13 +35,9 @@
    text-align: center;
 }
 
-.content{
-	padding: 10px;
-}
-
 .font{
 	color: white;
-	font-size: 10px;
+	font-size: 50px;
 
 }
 	
@@ -47,12 +48,12 @@
 </head>
 <body>
 <div class="header">
-	<div style="align-content: center;">
+	<div class="header-font">
 		<H1>WELCOME</H1>
 		
 	</div>
 </div>
-<div class="content">
+<div style="padding: 15px;">
 {% block content %}
 {% endblock content %}
 </div>
